@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       DON MAC CAFE — 404 Not Found Page
+       FILE PURPOSE: Display a friendly error page when a route is not found
+       CATEGORY: Error Pages
+       ============================================================ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Don Mac Cafe</title>
+  <!-- Favicon (coffee cup emoji as SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+  <!-- Global styles (navbar, typography, buttons, layout) -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     SECTION 1: NAVBAR (Injected by JavaScript)
+     ============================================================ -->
+<!-- Empty div where the global navbar is rendered via renderNavbar('') -->
+<div id="navbar"></div>
+
+<!-- ============================================================
+     SECTION 2: 404 CONTENT (Centered error message)
+     ============================================================ -->
+<div class="not-found-page">
+  <div class="not-found-inner">
+    <!-- Large error code (404) with caramel color -->
+    <div class="not-found-code">404</div>
+    <!-- Main error heading -->
+    <h2>Page Not Found</h2>
+    <!-- Friendly error description (coffee‑related humor) -->
+    <p>Looks like this page went out for coffee and never came back.<br>Let's get you somewhere useful.</p>
+    <!-- Action buttons: Go Home & Browse Menu -->
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="/" class="btn btn-primary btn-lg">
+        <!-- Home icon SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Go Home
+      </a>
+      <a href="/menu" class="btn btn-ghost btn-lg">Browse Menu</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 3: JAVASCRIPT (Render navbar on DOM ready)
+     ============================================================ -->
+<script src="/js/app.js"></script>
+<script>
+  // Wait for DOM to load, then render the global navbar (no active page highlight)
+  document.addEventListener('DOMContentLoaded', () => { renderNavbar(''); });
+</script>
+</body>
+</html>
